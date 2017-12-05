@@ -1,1 +1,38 @@
-<h1>Hello World</h1>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Get Stock Information</h1>
+  </div>
+</div>
+<div class="row form">
+  <div class="col-xs-12">
+    <%= form_tag root_path, :method => "POST", class: "form-inline" do %>
+        <div class="form-group">
+          <%= text_field_tag "id", nil, placeholder: "Ticker Symbol", size: 50, class: "form-control" %>
+        </div>
+          <%= button_tag "View Stock Quote", type: "submit", class: "btn btn-primary btn-md" %>
+    <% end %>
+  </div>
+</div>
+<div class="row main">
+  <% if @stock %>
+      <div class="col-xs-4">
+        <div class="panel panel-default">
+          <div class="panel-heading"><b><%= @stock.name %> - <%= @stock.symbol %></b></div>
+          <div class="panel-body"><%= @stock.summary[0]["overview"].inspect.truncate(255) %></div>
+          <ul class="list-group">
+            <li class="list-group-item"><b>Current Ask: </b><%= @stock.l %></li>
+            <li class="list-group-item"><b>Earning Per Share: </b><%= @stock.eps %></li>
+            <li class="list-group-item"><b>Price/Earning Ratio: </b><%= @stock.pe %></li>
+            <li class="list-group-item"><b>Market Cap: </b><%= @stock.mc %></li>
+            <li class="list-group-item"><b>Stock Open: </b><%= @stock.op %></li>
+            <li class="list-group-item"><b></b></b>Day's Range: <%= @stock.lo %> - <%= @stock.hi %></li>
+            <li class="list-group-item"><b>Year High: </b><%= @stock.hi52 %></li>
+            <li class="list-group-item"><b>Year Low: </b><%= @stock.lo52 %></li>
+          </ul>
+        </div>
+      </div>
+
+  <% elsif @error %>
+      <%= @error %>
+  <% end %>
+</div>
