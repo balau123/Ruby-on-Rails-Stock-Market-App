@@ -1,25 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Ruby-on-Rails-Stock-Market-App
+ ### Running the app
+ 
+ 1. Ensure you have `ruby` installed.
+ 
+ Follow the instructions for your platform [here](https://ruby-lang.com).
+ 
+ 2. Install all dependencies:
+ 
+ ````
+ bundle install
+ ````
