@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row title">
   <div class="col-xs-12">
     <h1>Get Stock Information</h1>
   </div>
@@ -15,19 +15,21 @@
 </div>
 <div class="row main">
   <% if @stock %>
-      <div class="col-xs-4">
+      <div class="col-xs-4 ">
+      </div>
+        <div class="col-xs-4 ">
         <div class="panel panel-default">
           <div class="panel-heading"><b><%= @stock.name %> - <%= @stock.symbol %></b></div>
           <div class="panel-body"><%= @stock.summary[0]["overview"].inspect.truncate(255) %></div>
           <ul class="list-group">
-            <li class="list-group-item"><b>Current Ask: </b><%= @stock.l %></li>
-            <li class="list-group-item"><b>Earning Per Share: </b><%= @stock.eps %></li>
+            <li class="list-group-item"><b>Current Ask: </b>$<%= @stock.l %></li>
+            <li class="list-group-item"><b>Earning Per Share: </b>$<%= @stock.eps %></li>
             <li class="list-group-item"><b>Price/Earning Ratio: </b><%= @stock.pe %></li>
             <li class="list-group-item"><b>Market Cap: </b><%= @stock.mc %></li>
-            <li class="list-group-item"><b>Stock Open: </b><%= @stock.op %></li>
-            <li class="list-group-item"><b></b></b>Day's Range: <%= @stock.lo %> - <%= @stock.hi %></li>
-            <li class="list-group-item"><b>Year High: </b><%= @stock.hi52 %></li>
-            <li class="list-group-item"><b>Year Low: </b><%= @stock.lo52 %></li>
+            <li class="list-group-item"><b>Stock Open: </b>$<%= @stock.op %></li>
+            <li class="list-group-item"><b>Day's Range: </b>$<%= @stock.lo %> - $<%= @stock.hi %></li>
+            <li class="list-group-item"><b>Year High: </b>$<%= @stock.hi52 %></li>
+            <li class="list-group-item"><b>Year Low: </b>$<%= @stock.lo52 %></li>
           </ul>
         </div>
       </div>

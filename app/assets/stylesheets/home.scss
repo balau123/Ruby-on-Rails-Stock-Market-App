@@ -5,7 +5,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.main, .form {
+body {
+  padding-top: 50px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-weight: 400;
+}
+.main, .form, .title {
   margin-bottom: 25px;
+  text-align: center;
 
 }
