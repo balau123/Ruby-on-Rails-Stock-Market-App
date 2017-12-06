@@ -4,12 +4,14 @@
   <title>Stock Market App</title>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.2.0/trianglify.min.js" %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 <%= render "home/flash" %>
 <%= render "home/navbar" %>
-<body class="container-fluid">
+<body class="container-fluid poly">
 <%= yield %>
 </body>
 </html>
