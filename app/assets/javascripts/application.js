@@ -50,7 +50,7 @@ $(document).ready(function () {
         });
     }
 
-    makePoly(Trianglify(options));
+    setTimeout(makePoly(Trianglify(options)), 500);
 
 // RESIZE TIMEOUT
     $(window).resize(function () {

@@ -9,6 +9,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.container-fluid {
+  margin-top: 0;
+}
 .panel-default {
   box-shadow: 1px 2px 1px rgba(0,0,0,0.125);
 }
@@ -17,6 +20,7 @@ body {
   min-height: 50px;
   margin-bottom: 20px;
   margin-left: -15px;
+  border-radius: 0 !important;
   margin-right: -15px;
   border: 1px solid transparent;
   padding: 0px 15px;
@@ -24,11 +28,26 @@ body {
   .navbar-brand, > ul > li > a {
     color: white !important;
   }
-  ul > li.active {
-    a {
+  ul > li {
+    > a {
+      color: white !important;
+    }
+    &.active > a {
       color: white !important;
       background: #315f31 !important;
     }
+  }
+}
+
+table {
+  th {
+  background: #5cb85c;
+  color: white;
+  font-size: 12px;
+}
+  background: white;
+  a.btn {
+    color: white;
   }
 }
 
