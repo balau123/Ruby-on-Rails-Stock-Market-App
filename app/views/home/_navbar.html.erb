@@ -2,7 +2,7 @@
   <div class="navbar-header">
     <%= link_to "Stock Market App", home_index_path, class: "navbar-brand" %>
     <ul class="nav navbar-nav navbar-left">
-      <li class="active"><%= link_to "Home", home_index_path %></li>
+      <li><%= link_to "Home", home_index_path %></li>
       <% if user_signed_in? %>
           <li class=""><%= link_to "My Stocks", stocks_path %></li>
           <li class=""><%= link_to "Create", new_stock_path %></li>
