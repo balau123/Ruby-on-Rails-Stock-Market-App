@@ -41,7 +41,9 @@ $(document).ready(function () {
     };
 
     function makePoly(pattern) {
-        $(".poly").each(function () {
+        var poly = $('html').find('.poly');
+        console.log("poly", poly);
+        poly.each(function () {
             $(this).css({
                 "background-image": "url(" + pattern.png() + ")",
                 "background-repeat": "no-repeat",
@@ -50,7 +52,7 @@ $(document).ready(function () {
         });
     }
 
-    setTimeout(makePoly(Trianglify(options)), 500);
+    makePoly(Trianglify(options));
 
 // RESIZE TIMEOUT
     $(window).resize(function () {

@@ -19,7 +19,7 @@
             <% begin %>
                 <% @stock_details = StockQuote::Stock.quote(stock.ticker) %>
             <% rescue StandardError %>
-                <% @error = "That stock ticker does not exist" %>
+                <% next %>
             <% end %>
             <tr>
               <td><%= @stock_details.name %> - <%= @stock_details.symbol %></td>
