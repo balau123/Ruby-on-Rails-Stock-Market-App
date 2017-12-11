@@ -15,9 +15,9 @@
 </div>
 <div class="row main">
   <% if @stock %>
-      <div class="col-xs-4 ">
+      <div class="col-sm-4 col-xs-12">
       </div>
-        <div class="col-xs-4 ">
+        <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default">
           <div class="panel-heading"><b><%= @stock.name %> - <%= @stock.symbol %></b></div>
           <div class="panel-body"><%= @stock.summary[0]["overview"].inspect.truncate(255) %></div>
